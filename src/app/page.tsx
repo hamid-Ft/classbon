@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "./_components/button/button";
 export default function Home() {
   return (
     <>
@@ -12,6 +13,15 @@ export default function Home() {
               مسیر سعود به قله های برنامه نویسی
             </h1>
             <p>هرجای مسیر برنامه نویسی که باشی هواتو داریم</p>
+
+            <div className="my-5 flex gap-4">
+              <Button variant="primary" size="large">
+                دوره های ری اکت و نکست
+              </Button>
+              <Button variant="neutral" size="large">
+                مشاوره برنامه نویسی
+              </Button>
+            </div>
             <Image
               className="grayscale mt-4 opacity-70 m-auto xl:m-0"
               src="/images/frameworks.png"
@@ -28,6 +38,11 @@ export default function Home() {
           />
         </div>
       </section>
+      <div className="container">
+        <Button variant="info" size="large" shape="wide" animatedIcon={true}>
+          ثبت نام
+        </Button>
+      </div>
     </>
   );
 }

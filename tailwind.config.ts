@@ -1,18 +1,30 @@
+import { Config } from "tailwindcss";
 import { colord, extend } from "colord";
 import mixPlugin from "colord/plugins/mix";
-import type { Config } from "tailwindcss";
 
 extend([mixPlugin]);
 
-const generateDarkenColorFrom = (input: string, percentage = 0.07): string =>
-  colord(input).darken(percentage).toHex();
+export function generateDarkenColorFrom(
+  input: string,
+  percentage = 0.07
+): string {
+  return colord(input).darken(percentage).toHex();
+}
 
-const generateForegroundColorFrom = (input: string, percentage = 0.8): string =>
-  colord(input)
+export function generateForegroundColorFrom(
+  input: string,
+  percentage = 0.8
+): string {
+  return colord(input)
     .mix(colord(input).isDark() ? "white" : "black", percentage)
     .toHex();
+}
 
-export const tailwindColors: Record<string, string> = {
+type ColorObject = {
+  [key: string]: string;
+};
+
+export const tailwindColors: ColorObject = {
   current: "currentColor",
   transparent: "transparent",
   white: "#F9F9F9",
@@ -48,10 +60,17 @@ export const tailwindColors: Record<string, string> = {
 };
 
 const config: Config = {
-  content: ["./src/app/**/*.{tsx,jsx}"],
+  content: ["./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     colors: tailwindColors,
-    container: { center: true },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "3rem",
+        xl: "4rem",
+      },
+    },
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/images/tile.svg')",
