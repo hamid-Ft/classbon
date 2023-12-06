@@ -18,3 +18,15 @@ html {
 .gradient-reverse {
   @apply bg-gradient-to-r from-gradient-second to-gradient-first text-transparent bg-clip-text;
 }
+
+.animated-icon {
+  & > * {
+    @apply transition-all;
+  }
+  &:hover {
+    @apply text-white;
+    & > * {
+      @apply -translate-x-2;
+    }
+  }
+}
