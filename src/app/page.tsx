@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Button } from "./_components/button/button";
 import HomeHeroSection from "./_components/home-hero-section/home-hero-section";
 import { CourseSummary } from "@/types/course-summary.interface";
 import CourseCardList from "./(courses)/_components/course-card-list";
+
+import { IconClock } from "./_components/icons/icons";
 
 const getNewestCourses = async (count: number): Promise<CourseSummary[]> => {
   const res = await fetch(
