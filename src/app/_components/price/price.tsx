@@ -1,4 +1,4 @@
-import Badge from "../badge/badge";
+import { Badge } from "../badge/badge";
 import { IconToman } from "../icons/icons";
 import { Size } from "../types/size.type";
 import { PriceProps } from "./price.types";

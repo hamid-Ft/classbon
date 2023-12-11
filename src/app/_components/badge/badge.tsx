@@ -1,5 +1,7 @@
+"use client";
+import React, { HTMLAttributes, ReactNode } from "react";
+import { ComponentBase } from "../types/component-base.type";
 import classNames from "classnames";
-import { BadgeProps } from "./badge.types";
 import { Size } from "../types/size.type";
 
 const sizeClasses: Record<Size, string> = {
@@ -9,17 +11,20 @@ const sizeClasses: Record<Size, string> = {
   large: "badge-lg",
 };
 
-const Badge: React.FC<BadgeProps> = ({
+export type BadgeProps = Omit<ComponentBase, "isDisabled"> & {
+  children: ReactNode;
+};
+
+export const Badge: React.FC<BadgeProps> = ({
   variant,
   className,
   children,
   size = "tiny",
-}: BadgeProps) => {
+}) => {
   const classes = classNames("badge", className, {
     [`badge-${variant}`]: variant,
     [`${sizeClasses[size]}`]: size,
   });
+
   return <span className={classes}>{children}</span>;
 };
-
-export default Badge;
