@@ -1,5 +1,7 @@
-@import "./button.css";
-@import "./loading.css";
-@import "./card.css";
-@import "./badge.css";
-@import "./avatar.css";
+@import "./components/button.css";
+@import "./components/loading.css";
+@import "./components/card.css";
+@import "./components/badge.css";
+@import "./components/avatar.css";
+@import "./components/progress.css";
+@import "./components/tabs.css";

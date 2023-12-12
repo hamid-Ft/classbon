@@ -62,7 +62,7 @@ export const Footer = () => {
           <div className="flex gap-5 items-center ">
             <Avatar
               src="/images/developer.jpg"
-              variant="neutral"
+              variant="primary"
               size="large"
             />
             <div className="flex flex-col">
