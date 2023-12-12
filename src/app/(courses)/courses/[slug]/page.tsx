@@ -3,6 +3,8 @@ import { CourseDetails } from "@/types/course-details.interface";
 import { CourseAside } from "./_components/course-aside";
 import { Tab } from "@/types/tab.type";
 import { Tabs } from "@/app/_components/tabs";
+import { Accordion } from "@/app/_components/accordion";
+import { Accordion as AccordionType } from "@/types/accordion.type";
 
 export async function generateStaticParams() {
   const res = await fetch(`${API_URL}/courses/slugs`);
@@ -25,6 +27,12 @@ export default async function CourseDetails({
   const { slug } = params;
   const course = await getCourse(slug);
 
+  const faqs: AccordionType[] = course.frequentlyAskedQuestions.map((faq) => ({
+    id: faq.id,
+    title: faq.question,
+    content: faq.answer,
+  }));
+
   const tabs: Tab[] = [
     {
       label: "مشخصات دوره",
@@ -36,7 +44,7 @@ export default async function CourseDetails({
     },
     {
       label: "سوالات متداول",
-      content: "accordion",
+      content: <Accordion data={faqs} />,
     },
   ];
 
