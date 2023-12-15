@@ -11,7 +11,7 @@ async function getNewestCourses(count: number): Promise<CourseSummary[]> {
   });
 
   // Introduce a 5-second delay after the fetch call
-  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return res.json();
 }
 

@@ -9,7 +9,7 @@
   }
 
   &-title {
-    @apply text-lg font-bold dark:text-white/75 dark:hover:text-white transition duration-200 ease-in-out;
+    @apply text-lg font-bold dark:text-white/75 dark:hover:text-white transition duration-200 ease-in-out cursor-pointer;
   }
 
   &-footer {
