@@ -37,35 +37,37 @@ exports[`HomeHeroSection display home hero section:  <section className="bg-hero
   </section> 1`] = `
 <div>
   <section
-    class="bg-hero-pattern mt-5 xl:mt-20 xl:bg-left"
+    class="bg-hero-pattern bg-no-repeat bg-center xl:bg-left mt-5 xl:mt-20"
   >
     <div
       class="container flex flex-col-reverse items-center xl:flex-row"
     >
       <div
-        class="flex flex-col gap-5 mt-12 pb-5 text-center xl:text-right"
+        class="flex-1 flex flex-col gap-5 mt-12 pb-5 text-center xl:text-right"
       >
         <h3
-          class="text-xl dark:text-info xl:text-2xl"
+          class="text-xl xl:text-2xl dark:text-info"
         >
-          خوش آمدید به ...
+          خوش اومدی به ...
         </h3>
         <h1
-          class="text-3xl font-black gradient lg:text-5xl xl:text-5xl"
+          class=" text-3xl lg:text-5xl xl:text-5xl font-black gradient"
         >
-          مسیر سعود به قله های برنامه نویسی
+          مسیر صعود به قله‌های برنامه‌نویسی
         </h1>
-        <p>
-          هرجای مسیر برنامه نویسی که باشی هواتو داریم
+        <p
+          class="max-w-2xl  text-lg md:text-xl font-bold leading-8"
+        >
+          هر جای مسیرِ برنامه‌نویسی که باشی، با هم‌راهی استادهای باتجربهٔ کلاسبن می‌تونی بدون محدودیت به قله‌های بالاتر صعود کنی. ما همیشه هواتو داریم.
         </p>
         <div
-          class="my-5 flex gap-4 justify-center xl:justify-start"
+          class="mt-5 flex justify-center xl:justify-start gap-4"
         >
           <button
-            class="btn animated-iconls btn-primary btn-lg "
+            class="btn animated-icon btn-primary btn-lg "
             type="button"
           >
-            دوره های ری اکت و نکست
+            دوره‌های ری‌اکت و نکست
             <svg
               fill="currentColor"
               height="24"
@@ -90,11 +92,11 @@ exports[`HomeHeroSection display home hero section:  <section className="bg-hero
             class="btn btn-neutral btn-lg "
             type="button"
           >
-            مشاوره برنامه نویسی
+            مشاوره برنامه‌نویسی
           </button>
         </div>
         <img
-          alt="FrameWorks"
+          alt=""
           class="grayscale mt-4 opacity-70 m-auto xl:m-0"
           data-nimg="1"
           decoding="async"
@@ -107,7 +109,7 @@ exports[`HomeHeroSection display home hero section:  <section className="bg-hero
         />
       </div>
       <img
-        alt="classbon"
+        alt=""
         data-nimg="1"
         decoding="async"
         height="521"

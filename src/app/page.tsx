@@ -1,5 +1,4 @@
 import { HomeHeroSection } from "./_components/home-hero-section/home-hero-section";
-import { CourseSummary } from "@/types/course-summary.interface";
 import { homeFeatures } from "@/data/home-features";
 import Feature from "./_components/feature/feature";
 import { Button } from "./_components/button/button";

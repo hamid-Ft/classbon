@@ -3,9 +3,9 @@ import { Button } from "./button";
 import { render, screen } from "@testing-library/react";
 describe("Button Component", () => {
   test("renders a default button", () => {
-    const { getByText } = render(<Button>Click Here</Button>);
-    getByText("Click Here");
-    expect(getByText("Click Here")).toBeInTheDocument();
+    render(<Button>Click Here</Button>);
+    screen.getByText("Click Here");
+    expect(screen.getByText("Click Here")).toBeInTheDocument();
     // const div = document.createElement("div");
     // ReactDOM.render(<Button>Click Here</Button>, div);
     // document.body.appendChild(div);

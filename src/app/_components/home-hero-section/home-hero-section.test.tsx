@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import HomeHeroSection from "./home-hero-section";
+import { HomeHeroSection } from "./home-hero-section";
 
 describe("HomeHeroSection", () => {
   test("display home hero section", () => {
