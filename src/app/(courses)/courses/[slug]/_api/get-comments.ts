@@ -3,25 +3,25 @@ import { CourseCommentList } from "../_types/course-comment.interface";
 import { useQuery } from "react-query";
 
 type GetCommentsOptions = {
-  params: {
-    slug: string;
-    page: number;
-  };
+	params: {
+		slug: string;
+		page: number;
+	};
 };
 
 const getComments = ({
-  params,
+	params,
 }: GetCommentsOptions): Promise<CourseCommentList> => {
-  const { slug, page } = params;
-  const url = `/courses/${slug}/comments?page=${page}`;
-  return readData(url);
+	const { slug, page } = params;
+	const url = `/courses/${slug}/comments?page=${page}`;
+	return readData(url);
 };
 
 export const useCourseComments = ({ params }: GetCommentsOptions) => {
-  const { data } = useQuery({
-    queryKey: ["courseComments"],
-    queryFn: () => getComments({ params }),
-  });
+	const { data } = useQuery({
+		queryKey: ["courseComments"],
+		queryFn: () => getComments({ params }),
+	});
 
-  return { data };
+	return { data };
 };
