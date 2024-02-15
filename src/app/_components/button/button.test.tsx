@@ -1,6 +1,7 @@
 import { describe } from "node:test";
 import { Button } from "./button";
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 describe("Button Component", () => {
 	test("renders a default button", () => {
 		render(<Button>Click Here</Button>);

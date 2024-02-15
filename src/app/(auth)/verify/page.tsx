@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 const Verify = async () => {
-  return (
-    <div className="text-5xl flex justify-center items-center w-full">
-      <h1>Verify</h1>
-    </div>
-  );
+	return (
+		<div className="">
+			<Link href="/signin">Go to SignIn Page</Link>
+		</div>
+	);
 };
 
 export default Verify;
