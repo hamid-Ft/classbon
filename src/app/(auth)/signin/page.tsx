@@ -1,4 +1,4 @@
-import SignInForm from "./components/signin-form";
+import SignInForm from "./_components/signin-form";
 
 const SignIn = async () => {
 	return <SignInForm />;
